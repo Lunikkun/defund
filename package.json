@@ -6,14 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "hhstart": "hardhat node",
+    "hhdeploy": "hardhat run --network localhost scripts/deploy.js"
   },
   "dependencies": {
+    "ethers": "^5.4.7",
+    "hardhat": "^2.22.18",
+    "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.7"
+    "web3modal": "^1.9.12"
   },
   "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "eslint": "9.20.1",
+    "eslint-config-next": "15.1.7",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   }
