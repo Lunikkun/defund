@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
+## Defund
+Smart contract in Solidity per la creazione di una piattaforma di crowwdfunding di criptovalute
+
 ## Per avviare il progetto
 
 -> hhstart
