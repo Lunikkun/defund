@@ -2,7 +2,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+-> hhstart
+-> hhcompile
+-> Prendere l'indirizzo del contratto compilato ed inserirlo in contants.js per aggiornare l'indirizzo del contrattto
+-> avviare il server next
 
 ```bash
 npm run dev
