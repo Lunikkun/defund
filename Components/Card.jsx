@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Card = ({allcampaign, setOpenModel, setDonate, title}) => {
     //console.log("VALORE ALLCAMPAIGN: " + allcampaign);
 
     const daysLeft = (deadline) => {
         const difference = new Date(deadline).getTime() - Date.now();
-        const remainingDays = difference / (1000 * 360 * 24);
+        const remainingDays = new Date(difference).getUTCDate()
         return remainingDays.toFixed(0);
     };
+
+    const setDate = (deadline) =>{
+        return new Date(deadline).toLocaleDateString()
+    }
 
     return (
         <div className="px-4 py-16 mx-auto sm:max-w-xl ms:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -26,8 +30,11 @@ const Card = ({allcampaign, setOpenModel, setDonate, title}) => {
                         />
 
                         <div className="py-5 pl-2">
-                            <p className=" mb-2 text-xs font-semibold text-purple-700 uppercase">
+                            <p className="mb-2 text-sm font-semibold text-purple-700 uppercase">
                             Days Left: {daysLeft(campaign.deadline)}
+                            </p>
+                            <p className="mb-2 text-xs font-semibold text-purple-700 uppercase">
+                            Deadline: {setDate(campaign.deadline)}
                             </p>
                             <a
                                 href="/"
